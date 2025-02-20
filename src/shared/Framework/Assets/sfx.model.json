@@ -1,0 +1,48 @@
+{
+    "ClassName": "Folder",
+    "Children": [
+      {
+        "Name": "punch_hit01",
+        "ClassName": "Sound",
+        "Properties": {
+          "SoundId": "rbxassetid://89490349596451"
+        }
+      },
+      {
+        "Name": "punch_hit02",
+        "ClassName": "Sound",
+        "Properties": {
+          "SoundId": "rbxassetid://106149394951426"
+        }
+      },
+      {
+        "Name": "punch_hit03",
+        "ClassName": "Sound",
+        "Properties": {
+          "SoundId": "rbxassetid://100687901981982"
+        }
+      },
+      {
+        "Name": "punch_swing01",
+        "ClassName": "Sound",
+        "Properties": {
+          "SoundId": "rbxassetid://125031733420923"
+        }
+      },
+      {
+        "Name": "punch_swing02",
+        "ClassName": "Sound",
+        "Properties": {
+          "SoundId": "rbxassetid://134705098275011"
+        }
+      },
+      {
+        "Name": "punch_swing03",
+        "ClassName": "Sound",
+        "Properties": {
+          "SoundId": "rbxassetid://111623063550217"
+        }
+      }
+      
+    ]
+  }
