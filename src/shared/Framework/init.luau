@@ -1,4 +1,5 @@
 local Framework = {}
+local Objects = {}
 
 function GetPath(Path)
     local string = string.split(Path, "/")
@@ -7,6 +8,18 @@ function GetPath(Path)
         currentPath = currentPath[nextPath]
     end
     return currentPath
+end
+
+function Framework:addObject(Object, Framework)
+    Objects[Object] = Framework
+end
+
+function Framework:removeObject(Object)
+    Objects[Objects] = nil
+end
+
+function Framework:GetObject(Object)
+    return Objects[Object]
 end
 
 
@@ -59,8 +72,10 @@ function Framework.new()
         self.ComboTable.KeysLogged = string.len(self.ComboTable.ComboVariation)
         self.ComboTable.LastPressed = os.clock()
     end
-  
-    return setmetatable(object, {__index = meta})
+    
+    local metatable = setmetatable(object, {__index = meta})
+
+    return metatable
 end
   
 
