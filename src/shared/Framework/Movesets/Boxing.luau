@@ -47,7 +47,7 @@ return {
         Events = {
             Jab = {
                 func = function(Owner, Key)
-                    Owner:Attack()
+                    Owner:Attack({})
 
                 end;
                 dmgfunc = function(Owner, Victim, DMG)
