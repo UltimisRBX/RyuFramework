@@ -22,10 +22,20 @@ function Framework:GetObject(Object)
     return Objects[Object]
 end
 
+local Hitbox = require(script.Common.Hitbox)
 
 function Framework.new()
     local object = {
         Model = nil,
+        Style = 1,
+        InCombat = false,
+        EquippedStyles = {
+            [1] = "Brawler",
+            [2] = "Rush",
+            [3] = "Beast",
+            [4] = "Dragon",
+        },
+
         ComboTable = {
             LastPressed = os.clock(),
             BlockStartTime = os.clock(),
@@ -59,6 +69,15 @@ function Framework.new()
         else
             warn("Sound wasn't found!")
         end
+    end
+
+    function meta:SelectStyle(StyleNumber:number)
+        self.Style = StyleNumber
+        warn(self.EquippedStyles[self.Style])
+    end
+
+    function meta:SetStyle(StyleNumber:number, Style:string)
+        self.EquippedStyles[StyleNumber] = Style
     end
 
     function meta:Attack(Args, Function)
